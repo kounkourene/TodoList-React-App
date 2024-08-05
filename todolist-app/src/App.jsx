@@ -3,7 +3,7 @@ import TodoApp from "./Components/TodoApp";
 
 const App = () => {
   return (
-    <div>
+    <div className="container">
       <TodoApp />
     </div>
   );

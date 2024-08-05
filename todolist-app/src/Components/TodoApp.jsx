@@ -8,13 +8,31 @@ const initialState = [
   {
     userId: 1,
     id: 1,
-    title: "delectus aut autem",
+    title: "MERN Full Stack",
     completed: false,
   },
   {
     userId: 1,
     id: 2,
-    title: "quis ut nam facilis et officia qui",
+    title: "JavaScript",
+    completed: false,
+  },
+  {
+    userId: 1,
+    id: 2,
+    title: "Mathematics",
+    completed: false,
+  },
+  {
+    userId: 1,
+    id: 2,
+    title: "Computer Science",
+    completed: false,
+  },
+  {
+    userId: 1,
+    id: 2,
+    title: "Automation Testing",
     completed: false,
   },
 ];
@@ -43,8 +61,19 @@ function TodoApp() {
   };
 
   return (
-    <div className="App">
-      <h1>Todo List</h1>
+    <div className="todo-app">
+      <header className="todo-header">
+        <h1 className="todo-logo">Todo List</h1>
+        <div className="search-bar">
+          <form>
+            <input type="text" placeholder="Search List" />
+            <button type="submit">
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+      </header>
+
       <TodoInput addTodo={addTodo} />
       <TodoList
         todos={todos}
@@ -52,6 +81,7 @@ function TodoApp() {
         deleteTodo={deleteTodo}
         saveTodo={saveTodo}
       />
+      <footer className="todo-footer">To do List App</footer>
     </div>
   );
 }
